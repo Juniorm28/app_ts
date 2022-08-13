@@ -10,6 +10,8 @@ export class GameRoutes {
 
         app.route("/games").get(this.gameController.index);
         app.route("/games").post(this.gameController.create);
+        app.route("/games/:id").delete(this.gameController.delete);
+
         
     }
 }

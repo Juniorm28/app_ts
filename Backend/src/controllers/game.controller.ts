@@ -25,4 +25,25 @@ async create (req: Request, res: Response){
         (err: Error) => res.status(500).json(err)
     }
 }
+
+
+async delete(req: Request, res: Response){
+    try {
+
+        const games = await Game.findByPk(req.params.id);
+        if (!games) {
+            return res.status(404).send({ error: 'El juego que desea eliminar no existe' });
+        }
+        await Game.destroy({
+            where: {
+                id: games.id
+            }
+        })
+        res.send({ message: 'Juego Borrado' });
+
+    } catch (e) {
+        res.status(500).send();
+
+    }
+};
 }
