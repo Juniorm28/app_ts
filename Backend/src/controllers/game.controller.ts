@@ -26,6 +26,23 @@ async create (req: Request, res: Response){
     }
 }
 
+async  getOne(req: Request, res: Response) {
+    try {
+        try {
+            var data = await Game.findByPk(req.params.id);
+            res.status(200).send(data);
+        }catch (e){
+            handleError(e, res);
+        }
+    } catch (error) {
+        console.log(error);
+        res.json({
+            data: {},
+            message: 'Ah ocurrido un error interno'
+        });
+    }
+};
+
 async update(req: Request, res: Response) {
     try {
 
@@ -71,4 +88,8 @@ async delete(req: Request, res: Response){
 
     }
 };
+}
+
+function handleError(e: unknown, res: Response<any, Record<string, any>>) {
+    throw new Error('Function not implemented.');
 }
