@@ -1,15 +1,22 @@
 import express, { Application   } from 'express';
 import morgan from 'morgan';
+import { Routes } from '../routes/index';
 
  export class App {
     app: Application;
 
     constructor(
-       private port?: number | string
+       private port?: number | string,
+       public routePrv: Routes = new Routes()
     ) {
         this.app = express();
         this.settings();
         this.middlewares();
+        this.routes();
+    }
+
+    private routes() {
+        this.routePrv.gameRoutes.ruta(this.app);
     }
 
     private middlewares() {
