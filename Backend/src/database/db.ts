@@ -20,9 +20,9 @@ export const database = new Sequelize(
 
 );
 
-database.sync({ force: true })
+database.sync({ force: false })
  .then(function () {
-    console.log(`La BD fue creada correctamente!!!`);
+    console.log(`La BD está activada!!!`);
   });
 
 module.exports = {database}

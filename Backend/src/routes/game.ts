@@ -8,6 +8,8 @@ export class GameRoutes {
 
     public ruta(app: Application) {
 
-        app.route("/games").get(this.gameController.index)
+        app.route("/games").get(this.gameController.index);
+        app.route("/games").post(this.gameController.create);
+        
     }
 }
