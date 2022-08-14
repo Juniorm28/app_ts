@@ -22,6 +22,8 @@ export class GameFormComponent implements OnInit {
   constructor(private gamesService: GamesService, private router: Router, private activatedRoute: ActivatedRoute) { }
 
   ngOnInit(): void {
+    const params =  this.activatedRoute.snapshot.params;
+    console.log(params);
   }
 
   saveNewGame(){
