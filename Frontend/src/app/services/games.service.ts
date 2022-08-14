@@ -6,6 +6,9 @@ import { GameI } from '../models/game-i';
   providedIn: 'root'
 })
 export class GamesService {
+  updateClient(id: any, game: any) {
+    throw new Error('Method not implemented.');
+  }
 
   API_URI = 'http://localhost:5000';
   game: GameI | undefined;
@@ -22,6 +25,10 @@ export class GamesService {
 
   addGame(game: GameI)  {
     return this.http.post(`${this.API_URI}/games`,game);
+  }
+
+  updateGame(id: string | number, updatedGame: GameI){
+    return this.http.put(`${this.API_URI}/games/${id}`,updatedGame);
   }
 
   deleteGame(id: string)  {

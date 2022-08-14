@@ -53,4 +53,16 @@ export class GameFormComponent implements OnInit {
     )
   }
 
+  updateGame(){
+    console.log(this.game);
+        this.gamesService.updateGame(this.game.id, this.game)
+        .subscribe(
+          res=>{
+            this.router.navigate(['/games']);
+            console.log(res);
+          },
+          err=> console.log(err)
+        )
+    }
+
 }
