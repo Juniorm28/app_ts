@@ -27,4 +27,8 @@ export class GameListComponent implements OnInit {
     );
   }
 
+  deleteGame(id:string) {
+    console.log(id)
+  }
+
 }
