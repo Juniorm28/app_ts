@@ -8,10 +8,11 @@ import { GameI } from '../models/game-i';
 export class GamesService {
 
   API_URI = 'http://localhost:5000';
+  game: GameI | undefined;
 
   constructor(private http: HttpClient) { }
 
-  getClients() {
+  getGames() {
     return this.http.get(`${this.API_URI}/games`);
   }
 }
