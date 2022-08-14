@@ -10,6 +10,7 @@ import { TituloComponent } from './componenets/layouts/main/content/titulo/titul
 import { GameListComponent } from './componenets/game/game-list/game-list.component';
 import { GamesService } from './services/games.service';
 import { GameFormComponent } from './componenets/game/game-form/game-form.component';
+import { FormsModule } from '@angular/forms'
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { GameFormComponent } from './componenets/game/game-form/game-form.compon
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [
     GamesService
