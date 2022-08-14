@@ -4,9 +4,14 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    redirectTo: '/',
+    redirectTo: '/games',
     pathMatch: 'full'
   }
+  // ,
+  // {
+  //   redirectTo: 'games',
+  //   // component: 
+  // }
 ];
 
 @NgModule({
