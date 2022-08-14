@@ -9,6 +9,7 @@ import { CopyrightComponent } from './componenets/layouts/main/footer/copyright/
 import { TituloComponent } from './componenets/layouts/main/content/titulo/titulo.component';
 import { GameListComponent } from './componenets/game/game-list/game-list.component';
 import { GamesService } from './services/games.service';
+import { GameFormComponent } from './componenets/game/game-form/game-form.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { GamesService } from './services/games.service';
     MenuComponent,
     CopyrightComponent,
     TituloComponent,
-    GameListComponent
+    GameListComponent,
+    GameFormComponent
   ],
   imports: [
     BrowserModule,
