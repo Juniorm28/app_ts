@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, HostBinding, OnInit } from '@angular/core';
 import { GamesService } from '../../../services/games.service';
 import { GameI } from '../../../models/game-i';
 
@@ -8,6 +8,8 @@ import { GameI } from '../../../models/game-i';
   styleUrls: ['./game-list.component.css']
 })
 export class GameListComponent implements OnInit {
+
+  @HostBinding('class') classes ='row';
 
   games: any = [];
 
@@ -25,6 +27,10 @@ export class GameListComponent implements OnInit {
       },
       err => console.error(err)
     );
+  }
+
+  editGame(id:string){
+    console.log(id)
   }
 
   deleteGame(id:string) {
