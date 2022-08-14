@@ -10,7 +10,7 @@
             <img [src]="game.image" class="card-img-top">
             <div class="card-body">
                 <p>{{game.description}}</p>
-                <a class="btn btn-info form-control" (click)="editGame(game.id)">
+                <a class="btn btn-info form-control" [routerLink]="['/games/edit', game.id]">
                     EDIT GAME
                 </a>
             </div>
