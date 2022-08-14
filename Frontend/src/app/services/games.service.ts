@@ -15,4 +15,8 @@ export class GamesService {
   getGames() {
     return this.http.get(`${this.API_URI}/games`);
   }
+
+  deleteGame(id: string)  {
+    return this.http.delete(`${this.API_URI}/games/${id}`);
+  }
 }

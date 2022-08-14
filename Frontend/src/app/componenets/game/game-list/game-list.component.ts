@@ -28,7 +28,13 @@ export class GameListComponent implements OnInit {
   }
 
   deleteGame(id:string) {
-    console.log(id)
+    // console.log(id);
+    this.gamesService.deleteGame(id).subscribe(
+      res=> {
+        console.log(res);
+        this.getGame();
+      }
+    )
   }
 
 }
