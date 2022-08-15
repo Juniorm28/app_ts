@@ -22,7 +22,7 @@
 
 <div class="col-md-4">
     <div class="card card-body text-center">
-        <img [src]="game.image" class="card-image-top">
+        <img [src]="game.image == '' ? 'assets/no-image.jpg' :  game.image" class="card-image-top">
         <h3>{{game.id}} . {{game.title}}</h3>
         <p>{{game.description}}</p>
         <p>{{game.createdAt | date: 'yyyy-MM-dd'}}</p>
