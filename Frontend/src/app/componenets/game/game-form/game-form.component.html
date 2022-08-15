@@ -1,4 +1,4 @@
-<div class="col-md-4 offset-md-4">
+<div class="col-md-4 offset-md-2">
     <div class="card">
         <div class="card-body">
             <div class="form-group">
@@ -17,5 +17,14 @@
                 Save
             </button>
         </div>
+    </div>
+</div>
+
+<div class="col-md-4">
+    <div class="card card-body text-center">
+        <img [src]="game.image" class="card-image-top">
+        <h3>{{game.id}} . {{game.title}}</h3>
+        <p>{{game.description}}</p>
+        <p>{{game.createdAt | date: 'yyyy-MM-dd'}}</p>
     </div>
 </div>
