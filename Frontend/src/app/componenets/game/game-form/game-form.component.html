@@ -23,8 +23,8 @@
 <div class="col-md-4">
     <div class="card card-body text-center">
         <img [src]="game.image == '' ? 'assets/no-image.jpg' :  game.image" class="card-image-top">
-        <h3>{{game.id}} . {{game.title}}</h3>
-        <p>{{game.description}}</p>
+        <h3>{{game.id}} . {{game.title == '' ? 'Game Title' :  game.title}}</h3>
+        <p>{{game.description == '' ? 'Write your description' :  game.description}}</p>
         <p>{{game.createdAt | date: 'yyyy-MM-dd'}}</p>
     </div>
 </div>
